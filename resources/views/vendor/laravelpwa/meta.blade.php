@@ -41,6 +41,6 @@
         }, function (err) {
             // registration failed :(
             console.log('Laravel PWA: ServiceWorker registration failed: ', err);
-        });
+        );
     }
 </script>
