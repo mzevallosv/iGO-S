@@ -19,7 +19,7 @@ import chartsRoutes from './modules/charts';
 import tableRoutes from './modules/table';
 import adminRoutes from './modules/admin';
 import nestedRoutes from './modules/nested';
-import errorRoutes from './modules/error';
+/* import errorRoutes from './modules/error'; */
 import excelRoutes from './modules/excel';
 import permissionRoutes from './modules/permission';
 
@@ -92,7 +92,7 @@ export const constantRoutes = [
       },
     ],
   },
-  {
+  /* {
     path: '/documentation',
     component: Layout,
     redirect: '/documentation/index',
@@ -101,10 +101,10 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: { title: 'documentation', icon: 'documentation', noCache: true },
+        meta: { title: 'documentation', icon: 'documentation', roles: ['user'], noCache: true },
       },
     ],
-  },
+  }, */
   {
     path: '/profile',
     component: Layout,
@@ -118,7 +118,7 @@ export const constantRoutes = [
       },
     ],
   },
-  {
+  /* {
     path: '/guide',
     component: Layout,
     redirect: '/guide/index',
@@ -130,7 +130,7 @@ export const constantRoutes = [
         meta: { title: 'guide', icon: 'guide', noCache: true },
       },
     ],
-  },
+  }, */
   elementUiRoutes,
 ];
 
@@ -154,7 +154,7 @@ export const asyncRoutes = [
       },
     ],
   },
-  {
+  /* {
     path: '/clipboard',
     component: Layout,
     redirect: 'noredirect',
@@ -168,7 +168,7 @@ export const asyncRoutes = [
       },
     ],
   },
-  errorRoutes,
+  errorRoutes, */
   excelRoutes,
   {
     path: '/zip',
@@ -217,7 +217,7 @@ export const asyncRoutes = [
       },
     ],
   },
-  {
+  /* {
     path: '/external-link',
     component: Layout,
     children: [
@@ -226,7 +226,7 @@ export const asyncRoutes = [
         meta: { title: 'externalLink', icon: 'link' },
       },
     ],
-  },
+  }, */
   { path: '*', redirect: '/404', hidden: true },
 ];
 

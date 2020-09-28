@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::get(env('LARAVUE_PATH'), 'LaravueController@index')->where('any', '.*')->name('laravue');
 });
+
+Route::get('/clear', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
